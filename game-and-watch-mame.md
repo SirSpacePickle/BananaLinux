@@ -1,6 +1,7 @@
 # Game & Watch through MAME, on both panels: plan
 
-Status (2026-11-06): stage 3 (integration) done on `feature/game-and-watch`; waiting for the user's check of `-8`, then the PR. Stage 1 started 2026-11-01. MVP built the same day (MAME master `ab8a0bb6`, SOURCES=hh_sm510.cpp:
+Status (2026-11-13): **done.** PR #206 merged 2026-11-07 (upstream `ff42bbe9`), shipped in BananaOS 0.5.3.4; the
+`feature/game-and-watch` and `feature/gw-core` branches are deleted. Stage 1 started 2026-11-01. MVP built the same day (MAME master `ab8a0bb6`, SOURCES=hh_sm510.cpp:
 176 drivers, 41 MB stripped; local patches for no fontconfig and for quitting on SDL_QUIT, `-DUSE_OZONE` for bgfx's
 EGL without X11); card bundle in `tmp/gnw-test/card/`. **Stage 1: go** (see "Stage 1 results"). Replaces the route choice in `game-and-watch.md`, which stays as
 the record of the alternatives.
@@ -160,9 +161,7 @@ Done and checked on the RG DS Plus (test packages up to `-8`):
 - Docs: `docs/EMULATORS.md` (Game & Watch section), the card's README.txt, README.md's systems list.
 
 To do:
-- The user to check `-8` on 0.5.2.2 with the MAME zips back (covers drawn, a deleted cover back after a reboot, no
-  RomM covers); then the PR to JorreFog/BananaLinux (no attribution line). No issue first (the user's call,
-  2026-11-01).
+- ~~The user to check `-8`, then the PR~~: done, #206, merged 2026-11-07, in 0.5.3.4.
 - Maybe: remember the view picked in the menu, and the panel swap, per game.
 - Not done, by choice: new covers shown without a menu restart (the menu keeps textures by path; a cover redrawn
   under the same name shows the old one until restart: the user, 2026-11-02, "no need").
